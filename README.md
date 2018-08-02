@@ -9,3 +9,4 @@ The data is stored in the memory
 Rest opperations:
 GET: 
 http://localhost:8080/messenger/webapi/messages -> Get all messages 
+http://localhost:8080/messenger/webapi/messages/{ID} -> Get an individual message
