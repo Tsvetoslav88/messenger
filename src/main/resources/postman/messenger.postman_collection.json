@@ -1,0 +1,87 @@
+{
+	"variables": [],
+	"info": {
+		"name": "messenger",
+		"_postman_id": "dae45498-49e7-f701-4270-ea35dea9d800",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET messages",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/messages/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET message",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/messages/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST message",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/messages",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": \"Tsetso\",\n    \"created\": \"2018-08-02T16:51:17.322\",\n    \"message\": \"Hello Tsetso\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT message",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/messages/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\n        \"author\": \"Tsetso\",\n        \"created\": \"2018-08-02T17:16:08.324\",\n        \"id\": 1,\n        \"message\": \"Hello World!!!\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE message",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/messages/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
