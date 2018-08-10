@@ -6,11 +6,8 @@ It's Level 3 application based on Richardson Maturity Model
 
 The data is stored in the memory
 
-Rest opperations:
-GET: 
-http://localhost:8080/messenger/webapi/messages -> Get all messages 
-http://localhost:8080/messenger/webapi/messages/{ID} -> Get an individual message
+The application has the following HTTP methods:
 
-POST:
-	Request body:
+
+Postman requests for all API resources can be found in the resource directory of the project.
 

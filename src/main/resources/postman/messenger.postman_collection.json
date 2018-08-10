@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "messenger",
-		"_postman_id": "dae45498-49e7-f701-4270-ea35dea9d800",
+		"_postman_id": "77674b15-8517-d4b0-e4d6-6f4ff9dfb9a3",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -13,7 +13,10 @@
 				"url": "http://localhost:8080/messenger/webapi/messages/",
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"description": ""
 			},
 			"response": []
@@ -24,7 +27,10 @@
 				"url": "http://localhost:8080/messenger/webapi/messages/1",
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"description": ""
 			},
 			"response": []
@@ -52,7 +58,7 @@
 		{
 			"name": "PUT message",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages/1",
+				"url": "http://localhost:8080/messenger/webapi/messages/3",
 				"method": "PUT",
 				"header": [
 					{
@@ -63,7 +69,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": " {\n        \"author\": \"Tsetso\",\n        \"created\": \"2018-08-02T17:16:08.324\",\n        \"id\": 1,\n        \"message\": \"Hello World!!!\"\n    }"
+					"raw": "{\n        \"author\": \"Tsetso\",\n        \"created\": \"2018-08-02T16:51:17.322\",\n        \"id\": 3,\n        \"message\": \"Hello Tsetso!!!!\"\n    }"
 				},
 				"description": ""
 			},
@@ -72,9 +78,91 @@
 		{
 			"name": "DELETE message",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages/1",
+				"url": "http://localhost:8080/messenger/webapi/messages/3",
 				"method": "DELETE",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET profiles",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/profiles/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET profile",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/profiles/Tsetso",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST profile",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/profiles",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Admin\",\n    \"lastName\": \"User\",\n    \"profileName\": \"Admin\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT profile",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/profiles/Admin",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"ADMIN\",\n        \"id\": 2,\n        \"lastName\": \"USER\",\n        \"profileName\": \"Admin\"\n    }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE  profile",
+			"request": {
+				"url": "http://localhost:8080/messenger/webapi/profiles/Admin",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
