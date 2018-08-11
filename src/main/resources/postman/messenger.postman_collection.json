@@ -384,6 +384,37 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET inject demo with Context param",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authSessionID",
+						"value": "200"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/injectdemo/context",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"injectdemo",
+						"context"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
