@@ -2,6 +2,7 @@ package org.vexelon.net.messenger.resources;
 
 import java.util.List;
 
+import javax.ws.rs.BeanParam;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -24,15 +25,13 @@ public class MessageResource {
 	MessageService messageService = new MessageService();
 	
 	@GET
-	public List<Message> getMessages(@QueryParam("year") int year,
-									 @QueryParam("start") int start,
-									 @QueryParam("size") int size) {
-		if(year > 0) {
-			return messageService.getAllMessagesForYear(year);
+	public List<Message> getMessages(@BeanParam MessageFirterBean filterBean) {
+		if(filterBean.getYear() > 0) {
+			return messageService.getAllMessagesForYear(filterBean.getYear());
 		}
 		
-		if(start > 0 && size > 0) {
-			return messageService.getAllMessagesPaginated(start, size);
+		if(filterBean.getStart() > 0 && filterBean.getSize()> 0) {
+			return messageService.getAllMessagesPaginated(filterBean.getStart(), filterBean.getSize());
 		}
 		return messageService.getAllMessages();
 	}
