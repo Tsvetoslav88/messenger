@@ -1,173 +1,387 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "b9e4c213-cd67-4537-b013-30a802e90bd7",
 		"name": "messenger",
-		"_postman_id": "77674b15-8517-d4b0-e4d6-6f4ff9dfb9a3",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "GET messages",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages/",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET messages by year(query param)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages?year=2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET messages by start and size(query params)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages?start=1&size=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET message",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages/1",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "POST message",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"author\": \"Tsetso\",\n    \"created\": \"2018-08-02T16:51:17.322\",\n    \"message\": \"Hello Tsetso\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "PUT message",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages/3",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n        \"author\": \"Tsetso\",\n        \"created\": \"2018-08-02T16:51:17.322\",\n        \"id\": 3,\n        \"message\": \"Hello Tsetso!!!!\"\n    }"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages",
+						"3"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "DELETE message",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/messages/3",
 				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages",
+						"3"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET profiles",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/profiles/",
 				"method": "GET",
 				"header": [],
-				"body": {},
-				"description": ""
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/profiles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"profiles",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET profile",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/profiles/Tsetso",
 				"method": "GET",
 				"header": [],
-				"body": {},
-				"description": ""
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/profiles/Tsetso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"profiles",
+						"Tsetso"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "POST profile",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/profiles",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"firstName\": \"Admin\",\n    \"lastName\": \"User\",\n    \"profileName\": \"Admin\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/profiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"profiles"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "PUT profile",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/profiles/Admin",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n        \"firstName\": \"ADMIN\",\n        \"id\": 2,\n        \"lastName\": \"USER\",\n        \"profileName\": \"Admin\"\n    }"
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/profiles/Admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"profiles",
+						"Admin"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "DELETE  profile",
 			"request": {
-				"url": "http://localhost:8080/messenger/webapi/profiles/Admin",
 				"method": "DELETE",
 				"header": [
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/profiles/Admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"profiles",
+						"Admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET inject demo with Matrix and Header param",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authSessionID",
+						"value": "200"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/injectdemo/annotations;param=value",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"injectdemo",
+						"annotations;param=value"
+					]
+				}
 			},
 			"response": []
 		}
