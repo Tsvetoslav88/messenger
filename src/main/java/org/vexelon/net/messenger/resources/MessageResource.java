@@ -15,6 +15,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.vexelon.net.messenger.model.Message;
+import org.vexelon.net.messenger.resources.beans.MessageFirterBean;
 import org.vexelon.net.messenger.service.MessageService;
 
 @Path("/messages") 
@@ -60,4 +61,8 @@ public class MessageResource {
 		return messageService.removeMessage(id);
 	}
 	
+	@Path("/{messageId}/comments")
+	public CommentResource getCommentResource() {
+		return new CommentResource();
+	}
 }

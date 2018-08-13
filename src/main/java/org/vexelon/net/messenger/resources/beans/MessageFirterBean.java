@@ -1,4 +1,4 @@
-package org.vexelon.net.messenger.resources;
+package org.vexelon.net.messenger.resources.beans;
 
 import javax.ws.rs.QueryParam;
 
