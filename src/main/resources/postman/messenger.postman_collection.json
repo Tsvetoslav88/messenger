@@ -9,7 +9,12 @@
 			"name": "GET All messages",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -92,6 +97,32 @@
 							"key": "size",
 							"value": "1"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET message Error exception(DataNotFound)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages",
+						"11"
 					]
 				}
 			},
@@ -472,6 +503,34 @@
 			"response": []
 		},
 		{
+			"name": "GET comment Error Exception (invalid commentId)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/messages/3/comments/111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"messages",
+						"3",
+						"comments",
+						"111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "POST comment",
 			"request": {
 				"method": "POST",
@@ -560,6 +619,31 @@
 						"3",
 						"comments",
 						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET invalid URL - Generic exception",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/messenger/webapi/message",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messenger",
+						"webapi",
+						"message"
 					]
 				}
 			},
