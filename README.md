@@ -12,7 +12,7 @@ The application has the following HTTP methods:
 - JDK8
 - Apache Tomcat 7
 - Maven
-- Glassfish Jersy
+- Glassfish jersey
 
 ## Build and Run the application
 _Option1_: Run the application from IDE on Apache Tomcat application server
